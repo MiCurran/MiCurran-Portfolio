@@ -7,15 +7,18 @@ import { AnimatedText } from '../../components/AnimatedText/AnimatedText';
 import { useColorMode } from '@chakra-ui/color-mode';
 import PortfolioCard from '../../components/PortfolioCard/PortfolioCard';
 import { projects } from '../../constants/projects';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import MyTerminal from '../../components/Terminal/MyTerminal';
 import { useColorModeValue } from '@chakra-ui/color-mode';
 import { SunIcon, MoonIcon } from '@chakra-ui/icons';
 import { GoTools } from 'react-icons/go';
 import { SiNextDotJs, SiTailwindcss, SiBootstrap, SiGithub } from 'react-icons/si';
 import { FaReact } from 'react-icons/fa';
+import * as ga from '../lib/ga'
+import { useRouter } from 'next/router'
 
 export default function Home() {
+  const router = useRouter()
   const { colorMode, toggleColorMode } = useColorMode()
   const [activeType, setActiveType] = useState(null);
   const [activeSkill, setActiveSkill] = useState('Backend');
@@ -29,7 +32,20 @@ export default function Home() {
   const handleSetActiveSkill = (type) => {
     setActiveSkill(type);
   };
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      ga.pageview(url)
+    }
+    //When the component is mounted, subscribe to router changes
+    //and log those page views
+    router.events.on('routeChangeComplete', handleRouteChange)
 
+    // If the component is unmounted, unsubscribe
+    // from the event with the `off` method
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [router.events])
   return (
     <div >
       <Head>
