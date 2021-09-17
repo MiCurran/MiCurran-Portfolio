@@ -14,7 +14,7 @@ import { SunIcon, MoonIcon } from '@chakra-ui/icons';
 import { GoTools } from 'react-icons/go';
 import { SiNextDotJs, SiTailwindcss, SiBootstrap, SiGithub } from 'react-icons/si';
 import { FaReact } from 'react-icons/fa';
-import * as ga from '../lib/ga'
+import * as ga from '../../lib/ga'
 import { useRouter } from 'next/router'
 
 export default function Home() {
