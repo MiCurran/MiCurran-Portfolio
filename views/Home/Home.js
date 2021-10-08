@@ -127,6 +127,8 @@ export default function Home() {
               imgSrc={x.imgSrc}
               date={x.date}
               description={x.description}
+              linkToCode={x.linkToCode}
+              linkToLive={x.linkToLive}
               length={x.length}
             />
             ))}

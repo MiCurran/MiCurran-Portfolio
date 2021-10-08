@@ -6,19 +6,27 @@ import {
   Text,
   Stack,
   Avatar,
+  Link,
+  Button,
+  HStack,
   useColorModeValue,
 } from '@chakra-ui/react';
 import { useColorMode } from '@chakra-ui/color-mode';
+import { ExternalLinkIcon } from '@chakra-ui/icons'
+import { useRouter } from 'next/router';
 
 export default function PortfolioCard({ linkToCode, linkToLive, description, title, imgSrc, type, date, length, activeType}) {
   const { colorMode, toggleColorMode } = useColorMode()
+  const router = useRouter();
+
+  const handleGoToRoute = (route) => router.push(route);
+
   if (activeType === type || activeType === null){
   return (
     <Center py={6}>
       <Box
         maxW={'445px'}
         w={'full'}
-        maxH={'475px'}
         bg={colorMode === 'light' ? 'white' : 'gray.900'}
         boxShadow={'2xl'}
         rounded={'md'}
@@ -64,10 +72,20 @@ export default function PortfolioCard({ linkToCode, linkToLive, description, tit
         {date && 
         <Stack mt={6} direction={'row'} spacing={4} align={'center'}>
           <Stack direction={'column'} spacing={0} fontSize={'sm'}>
-            <Text color={'gray.300'}>{date || ''} {length && `· ${length} read`}</Text>
+            <Text color={'gray.500'}>{date || ''} {length && `· ${length} read`}</Text>
           </Stack>
         </Stack>
         }
+        <HStack> 
+          <Link href="https://chakra-ui.com" isExternal>
+            <Button colorScheme="purple" rightIcon={<ExternalLinkIcon />} href={linkToLive} variant="solid">{linkToCode ? 'View Live' : 'View Post'}</Button>
+          </Link>
+          {linkToCode &&
+            <Link href="https://chakra-ui.com" isExternal>
+            <Button colorScheme="gray" rightIcon={<ExternalLinkIcon />} href={linkToLive} variant="solid">View Code</Button>
+            </Link>
+          }
+        </HStack>
       </Box>
     </Center>
   );
