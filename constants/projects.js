@@ -1,5 +1,14 @@
 export const projects = [
     {
+        type: 'React App',
+        title: 'NextJS & ChakraUI Boilerplate Nami Wallet Integration',
+        imgSrc: '/images/namiWallet.png',
+        date: '10/21',
+        linkToCode: 'https://github.com/MiCurran/Nextjs-NamiWallet-Boilerplate',
+        linkToLive: '#',
+        description: 'This app serves as a jumping off point for viewing the Cardano Nami Wallet within a Nextjs Application. With ChakraUI & Sass'
+    },
+    {
         type: 'Blog',
         title: 'Writing a create component script',
         imgSrc: '/images/blogPostScript.png',
