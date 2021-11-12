@@ -77,12 +77,12 @@ export default function PortfolioCard({ linkToCode, linkToLive, description, tit
         </Stack>
         }
         <HStack> 
-          <Link href="https://chakra-ui.com" isExternal>
-            <Button colorScheme="purple" rightIcon={<ExternalLinkIcon />} href={linkToLive} variant="solid">{linkToCode ? 'View Live' : 'View Post'}</Button>
+          <Link href={linkToLive} isExternal>
+            <Button colorScheme="purple" rightIcon={<ExternalLinkIcon />}  variant="solid">{linkToCode ? 'View Live' : 'View Post'}</Button>
           </Link>
           {linkToCode &&
-            <Link href="https://chakra-ui.com" isExternal>
-            <Button colorScheme="gray" rightIcon={<ExternalLinkIcon />} href={linkToLive} variant="solid">View Code</Button>
+            <Link href={linkToCode} isExternal>
+            <Button colorScheme="gray" rightIcon={<ExternalLinkIcon />}  variant="solid">View Code</Button>
             </Link>
           }
         </HStack>
