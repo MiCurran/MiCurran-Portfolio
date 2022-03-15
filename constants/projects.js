@@ -1,11 +1,11 @@
 export const projects = [
     {
         type: 'React App',
-        title: 'NextJS & ChakraUI Boilerplate Nami Wallet Integration',
+        title: 'NextJS Boilerplate - Cardano Dapp Wallet Integration',
         imgSrc: '/images/namiWallet.png',
-        date: '10/21',
+        date: '1/22',
         linkToCode: 'https://github.com/MiCurran/Nextjs-NamiWallet-Boilerplate',
-        linkToLive: '#',
+        linkToLive: 'https://nextjs-nami-wallet-boilerplate.vercel.app/',
         description: 'This app serves as a jumping off point for viewing the Cardano Nami Wallet within a Nextjs Application. With ChakraUI & Sass'
     },
     {
@@ -55,4 +55,4 @@ export const projects = [
         description: 'This app uses the API from the Steam game Brawlhalla. It displays stats for the top Brawlhalla players per region 50 at a time. Displays' +
             'Current and Peak ELO rating and their current win rate.'
     },
- ];
+];

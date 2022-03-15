@@ -1,13 +1,11 @@
-import Typist from 'react-typist';
-
+import { Text } from "@chakra-ui/react";
 export const AnimatedText = ({textToAnimate, secondTextToAnimate}) => {
 
     return (
-      <Typist>
+      <Text>
         {textToAnimate}
-        <Typist.Delay ms={2_000} />
         <br />
         {secondTextToAnimate}
-      </Typist>
+      </Text>
     );
 }

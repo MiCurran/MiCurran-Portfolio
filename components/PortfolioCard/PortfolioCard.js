@@ -14,6 +14,7 @@ import {
 import { useColorMode } from '@chakra-ui/color-mode';
 import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { useRouter } from 'next/router';
+import CustomLink from '../CustomLink/CustomLink';
 
 export default function PortfolioCard({ linkToCode, linkToLive, description, title, imgSrc, type, date, length, activeType}) {
   const { colorMode, toggleColorMode } = useColorMode()
@@ -31,7 +32,7 @@ export default function PortfolioCard({ linkToCode, linkToLive, description, tit
         boxShadow={'2xl'}
         rounded={'md'}
         p={6}
-        overflow={'hidden'}>
+        >
         <Box
           h={'210px'}
           bg={'gray.100'}
@@ -77,13 +78,13 @@ export default function PortfolioCard({ linkToCode, linkToLive, description, tit
         </Stack>
         }
         <HStack> 
-          <Link href={linkToLive} isExternal>
+          <CustomLink href={linkToLive} isExternal>
             <Button colorScheme="purple" rightIcon={<ExternalLinkIcon />}  variant="solid">{linkToCode ? 'View Live' : 'View Post'}</Button>
-          </Link>
+          </CustomLink>
           {linkToCode &&
-            <Link href={linkToCode} isExternal>
+            <CustomLink href={linkToCode} isExternal>
             <Button colorScheme="gray" rightIcon={<ExternalLinkIcon />}  variant="solid">View Code</Button>
-            </Link>
+            </CustomLink>
           }
         </HStack>
       </Box>
