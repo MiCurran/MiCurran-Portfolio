@@ -37,7 +37,7 @@ export default function CustomLink({ children, href }) {
     let handleFetchImage = async (url) => {
       let {
         data: { image },
-      } = await axios.get("/api/preview", {
+      } = await axios.get("http://micuran.dev/api/preview", {
         params: { url },
       });
       setImagePreview(image);

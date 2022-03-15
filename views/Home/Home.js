@@ -155,8 +155,7 @@ export default function Home() {
         <Section height={'auto'}>
                 <Center flexDir={'column'} py={[20, 28]}>
             <Box w={['100%', "50%"]}>
-              <CustomLink href={'https://www.google.com'}>Test Link</CustomLink>
-                <Text 
+ß                <Text 
                     textAlign="center" 
                     textColor={useColorModeValue('gray.800',"gray.300")} 
                     fontSize="xl"
