@@ -81,12 +81,7 @@ export default function Home() {
           <VStack
           margin={[ '10', '20']}
           >
-            <Heading as="h1">Check out what I have been working on!</Heading>
-            <Box w={['100%', "50%"]}><Text textAlign="center" textColor={useColorModeValue('gray.800',"gray.300")} fontSize="xl">
-            I am currently working as a Web Developer doing contract work and 
-            looking for a full time job! I have a serious passion for creating unique and 
-            memorable user experiences through intuitive and dynamic UI.
-            </Text></Box>
+            
             <HStack>
             <Button 
                 onClick={() => handleSetActiveType(null)}
