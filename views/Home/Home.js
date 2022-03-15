@@ -155,7 +155,7 @@ export default function Home() {
         <Section height={'auto'}>
                 <Center flexDir={'column'} py={[20, 28]}>
             <Box w={['100%', "50%"]}>
-ß                <Text 
+                <Text 
                     textAlign="center" 
                     textColor={useColorModeValue('gray.800',"gray.300")} 
                     fontSize="xl"
