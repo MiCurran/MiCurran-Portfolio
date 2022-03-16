@@ -17,7 +17,6 @@ import Footer from '../../components/Footer/Footer';
 import {HiDocumentText } from 'react-icons/hi'
 import { motion } from "framer-motion"
 import { animationVariants } from '../../constants/animationVariants';
-import CustomLink from '../../components/CustomLink/CustomLink';
 
 const MotionHeading = motion(Heading);
 const MotionAvatar = motion(Avatar);
@@ -95,7 +94,6 @@ export default function Home() {
                   </Heading>
             </VStack>   
             <VStack alignContent={['center', 'left']} justifyContent="center">
-              <CustomLink href={'https://github.com/micurran'}>
               <a target="_blank" rel="noopener noreferrer" 
                   href="https://github.com/micurran">
                       <Button
@@ -112,7 +110,6 @@ export default function Home() {
                         View My Github! 
                       </Button>
                 </a>
-              </CustomLink>
                 <a 
                       target="_blank" 
                       rel="noopener noreferrer" 

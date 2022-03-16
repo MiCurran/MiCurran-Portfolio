@@ -78,13 +78,9 @@ export default function PortfolioCard({ linkToCode, linkToLive, description, tit
         </Stack>
         }
         <HStack> 
-          <CustomLink href={linkToLive} isExternal>
             <Button colorScheme="purple" rightIcon={<ExternalLinkIcon />}  variant="solid">{linkToCode ? 'View Live' : 'View Post'}</Button>
-          </CustomLink>
           {linkToCode &&
-            <CustomLink href={linkToCode} isExternal>
             <Button colorScheme="gray" rightIcon={<ExternalLinkIcon />}  variant="solid">View Code</Button>
-            </CustomLink>
           }
         </HStack>
       </Box>

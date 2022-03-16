@@ -7,7 +7,6 @@ import {
     Image,
 Box,
 } from '@chakra-ui/react';
-import chromium from 'chrome-aws-lambda';
 
 export default function CustomLink({ children, href }) {
     let [imagePreview, setImagePreview] = useState("");
@@ -36,26 +35,11 @@ export default function CustomLink({ children, href }) {
     };
   
     let handleFetchImage = async (url) => {
-    
-    let getImageBase64 = async (url) => {
-      //let browser = await chromium.puppeteer.launch();
-      // import * as puppeteer from 'puppeteer';
-    // const browser = await puppeteer.launch( { args: ['--no-sandbox'] } );
-    
-    const browser = await chromium.puppeteer.launch({
-        args: [...chromium.args, "--hide-scrollbars", "--disable-web-security"],
-        defaultViewport: chromium.defaultViewport,
-        executablePath: await chromium.executablePath,
-        headless: true,
-        ignoreHTTPSErrors: true,
-      })
-      let page = await browser.newPage();
-      await page.goto(url);
-      let image = await page.screenshot({ encoding: "base64" });
-      await browser.close();
-      return image;
-    };
-    const image = await getImageBase64(url);
+      let {
+        data: { image },
+      } = await axios.get("/api/preview", {
+        params: { url },
+      });
       setImagePreview(image);
     };
   
