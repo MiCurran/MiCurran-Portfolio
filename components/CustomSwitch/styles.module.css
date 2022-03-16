@@ -19,7 +19,7 @@
     transform: rotateZ(180deg);
   }
   
-  .switch[data-isOn="true"] {
+  .switch[data-ison="true"] {
     justify-content: flex-end;
     animation-duration: 1s;
     animation-name: slidein;

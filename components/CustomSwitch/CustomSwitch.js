@@ -19,12 +19,12 @@ export default function CustomSwitch() {
     <Box
         m={4}
         bgColor={useColorModeValue('gray.200', 'gray.700')}
-        className={styles.switch} data-isOn={isOn} onClick={() => toggleSwitch()}>
+        className={styles.switch} data-ison={isOn} onClick={() => toggleSwitch()}>
         {colorMode === 'light'
-            ? (<FaSun color={'orange'} className={styles.handle} layout transition={spring} 
+            ? (<FaSun color={'orange'} className={styles.handle} layout={true} transition={spring} 
                 
             />)
-            : <FaMoon color={'yellow'} className={styles.handle} layout transition={spring} />
+            : <FaMoon color={'yellow'} className={styles.handle} layout={true} transition={spring} />
         
         }
     </Box>

@@ -104,7 +104,6 @@ export default function PortfolioCard({ linkToCode, linkToLive, description, tit
               <LinkSection />
             }
         </HStack>
-        <LinkSection linkToCode={linkToCode} linkToLive={linkToLive}/>
         </Box>
     </Center>
   );
