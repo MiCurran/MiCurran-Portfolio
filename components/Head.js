@@ -1,6 +1,6 @@
 import { NextSeo } from 'next-seo';
 
-const SEOHead = ({title, description, twitter, name}) => (
+const SEOHead = ({title, description, twitter, name, content}) => (
     <NextSeo
       title={title}
       description={description}
@@ -34,6 +34,16 @@ const SEOHead = ({title, description, twitter, name}) => (
         site: '@site',
         cardType: 'summary_large_image',
       }}
+      additionalMetaTags={[{
+        property: 'dc:creator',
+        content: content
+      }, {
+        name: name,
+        content: content
+      }, {
+        httpEquiv: 'x-ua-compatible',
+        content: 'IE=edge; chrome=1'
+      }]}
     />
 );
 
