@@ -64,7 +64,6 @@ return (
 
 const DateSection = ({date, length}) => {
  return (
-    date && 
     <Stack mt={6} direction={'row'} spacing={4} align={'center'}>
       <Stack direction={'column'} spacing={0} fontSize={'sm'}>
         <Text fontWeight={'bold'} color={useColorModeValue('gray.700','gray.300')}>{date || ''} {length && `· ${length} read`}</Text>
@@ -74,16 +73,9 @@ const DateSection = ({date, length}) => {
 }
 
 const LinkSection = ({linkToCode, linkToLive}) => (
-<HStack> 
-            <Link href={linkToLive} isExternal>
-            <Button colorScheme="purple" rightIcon={<ExternalLinkIcon />}  variant="solid">{linkToCode ? 'View Live' : 'View Post'}</Button>
-            </Link>
-          {linkToCode &&
-            <Link href={linkToCode} isExternal>
-            <Button colorScheme="gray" rightIcon={<ExternalLinkIcon />}  variant="solid">View Code</Button>
-            </Link>
-          }
-        </HStack>
+    <Link href={linkToCode} isExternal>
+    <Button colorScheme="gray" rightIcon={<ExternalLinkIcon />}  variant="solid">View Code</Button>
+    </Link>
 )
 
 export default function PortfolioCard({ linkToCode, linkToLive, description, title, imgSrc, type, date, length, activeType}) {
@@ -101,7 +93,17 @@ export default function PortfolioCard({ linkToCode, linkToLive, description, tit
         p={6}
         >
         <CardBody title={title} description={description} imgSrc={imgSrc} type={type}/>
-        <DateSection date={date} length={length}/>
+        {date && 
+          <DateSection date={date} length={length}/>
+        }
+        <HStack> 
+            <Link href={linkToLive} isExternal>
+            <Button colorScheme="purple" rightIcon={<ExternalLinkIcon />}  variant="solid">{linkToCode ? 'View Live' : 'View Post'}</Button>
+            </Link>
+            {linkToCode && 
+              <LinkSection />
+            }
+        </HStack>
         <LinkSection linkToCode={linkToCode} linkToLive={linkToLive}/>
         </Box>
     </Center>
