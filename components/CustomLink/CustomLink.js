@@ -7,6 +7,7 @@ import {
     Image,
 Box,
 } from '@chakra-ui/react';
+import chromium from 'chrome-aws-lambda';
 
 export default function CustomLink({ children, href }) {
     let [imagePreview, setImagePreview] = useState("");
