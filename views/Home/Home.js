@@ -18,7 +18,6 @@ import {HiDocumentText } from 'react-icons/hi'
 import { motion } from "framer-motion"
 import { animationVariants } from '../../constants/animationVariants';
 import CustomSwitch from '../../components/CustomSwitch/CustomSwitch';
-import SEOHead from '../../components/Head';
 
 const MotionHeading = motion(Heading);
 const MotionAvatar = motion(Avatar);
@@ -43,20 +42,6 @@ export default function Home() {
     } else setActiveType(null);
   };
 
-  useEffect(() => {
-    const handleRouteChange = (url) => {
-      ga.pageview(url)
-    }
-    //When the component is mounted, subscribe to router changes
-    //and log those page views
-    router.events.on('routeChangeComplete', handleRouteChange)
-
-    // If the component is unmounted, unsubscribe
-    // from the event with the `off` method
-    return () => {
-      router.events.off('routeChangeComplete', handleRouteChange)
-    }
-  }, [router.events])
   return (
     <div >
       <main>
