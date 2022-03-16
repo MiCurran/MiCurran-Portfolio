@@ -17,9 +17,11 @@ import Footer from '../../components/Footer/Footer';
 import {HiDocumentText } from 'react-icons/hi'
 import { motion } from "framer-motion"
 import { animationVariants } from '../../constants/animationVariants';
+import CustomSwitch from '../../components/CustomSwitch/CustomSwitch';
 
 const MotionHeading = motion(Heading);
 const MotionAvatar = motion(Avatar);
+const MotionSwitch = motion(Switch);
 
 const Section = ({children, height}) => (
   <Box 
@@ -64,11 +66,8 @@ export default function Home() {
       <main>
         <Section>
         <HStack style={{position: 'absolute', top: '-10', left: '0'}}>
-                <Switch size="lg" onChange={toggleColorMode}/>
-                {colorMode === 'light' 
-                  ? <SunIcon/>
-                  : <MoonIcon />
-                }
+                <CustomSwitch />
+                {colorMode === 'light'}
                 </HStack>
           <Center
             h={'full'}
