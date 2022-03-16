@@ -66,7 +66,7 @@ export default function PortfolioCard({ linkToCode, linkToLive, description, tit
             whiteSpace={'wrap'}
             overflow={'hidden'}
             textOverflow={'ellipsis'}
-            color={useColorModeValue('gray.700', 'gray.300')}>
+            color={'gray.400'}>
             {description}
           </Text>
         </Stack>
