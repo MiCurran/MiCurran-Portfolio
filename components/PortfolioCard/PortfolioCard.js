@@ -66,14 +66,14 @@ export default function PortfolioCard({ linkToCode, linkToLive, description, tit
             whiteSpace={'wrap'}
             overflow={'hidden'}
             textOverflow={'ellipsis'}
-            color={'gray.500'}>
+            color={useColorModeValue('gray.700', 'gray.300')}>
             {description}
           </Text>
         </Stack>
         {date && 
         <Stack mt={6} direction={'row'} spacing={4} align={'center'}>
           <Stack direction={'column'} spacing={0} fontSize={'sm'}>
-            <Text color={'gray.500'}>{date || ''} {length && `· ${length} read`}</Text>
+            <Text fontWeight={'bold'} color={useColorModeValue('gray.700','gray.300')}>{date || ''} {length && `· ${length} read`}</Text>
           </Stack>
         </Stack>
         }

@@ -80,7 +80,7 @@ export default function Home() {
                     scale: [1, 2, 2, 1, 1],
                     rotate: [0, 0, 270, 270, 0],
                   }}
-                  size="2xl" name="Michael Curran" src="https://avatars.githubusercontent.com/u/65498724?v=4" />{" "}
+                  size="2xl" name="Michael Curran" src="/me.jpeg" />{" "}
                 <Heading as="h1" color={useColorModeValue('gray.700', 'white')}>
                     Hi I'm Michael!
                     <Heading className='wave'>👋</Heading>
