@@ -16,23 +16,11 @@ import { ExternalLinkIcon } from '@chakra-ui/icons'
 import { useRouter } from 'next/router';
 import CustomLink from '../CustomLink/CustomLink';
 
-export default function PortfolioCard({ linkToCode, linkToLive, description, title, imgSrc, type, date, length, activeType}) {
+const CardBody = ({title, imgSrc, type, description}) => {
   const { colorMode, toggleColorMode } = useColorMode()
-  const router = useRouter();
 
-  const handleGoToRoute = (route) => router.push(route);
-
-  if (activeType === type || activeType === null){
-  return (
-    <Center py={6}>
-      <Box
-        maxW={'445px'}
-        w={'full'}
-        bg={colorMode === 'light' ? 'white' : 'gray.900'}
-        boxShadow={'2xl'}
-        rounded={'md'}
-        p={6}
-        >
+return (
+<>
         <Box
           h={'210px'}
           bg={'gray.100'}
@@ -66,24 +54,56 @@ export default function PortfolioCard({ linkToCode, linkToLive, description, tit
             whiteSpace={'wrap'}
             overflow={'hidden'}
             textOverflow={'ellipsis'}
-            color={'gray.400'}>
+            color={useColorModeValue('gray.600','gray.300')}>
             {description}
           </Text>
         </Stack>
-        {date && 
-        <Stack mt={6} direction={'row'} spacing={4} align={'center'}>
-          <Stack direction={'column'} spacing={0} fontSize={'sm'}>
-            <Text fontWeight={'bold'} color={'gray.400'}>{date || ''} {length && `· ${length} read`}</Text>
-          </Stack>
-        </Stack>
-        }
-        <HStack> 
+</>
+)
+}
+
+const DateSection = ({date, length}) => {
+ return (
+    date && 
+    <Stack mt={6} direction={'row'} spacing={4} align={'center'}>
+      <Stack direction={'column'} spacing={0} fontSize={'sm'}>
+        <Text fontWeight={'bold'} color={useColorModeValue('gray.700','gray.300')}>{date || ''} {length && `· ${length} read`}</Text>
+      </Stack>
+    </Stack>
+ )
+}
+
+const LinkSection = ({linkToCode, linkToLive}) => (
+<HStack> 
+            <Link href={linkToLive} isExternal>
             <Button colorScheme="purple" rightIcon={<ExternalLinkIcon />}  variant="solid">{linkToCode ? 'View Live' : 'View Post'}</Button>
+            </Link>
           {linkToCode &&
+            <Link href={linkToCode} isExternal>
             <Button colorScheme="gray" rightIcon={<ExternalLinkIcon />}  variant="solid">View Code</Button>
+            </Link>
           }
         </HStack>
-      </Box>
+)
+
+export default function PortfolioCard({ linkToCode, linkToLive, description, title, imgSrc, type, date, length, activeType}) {
+  const { colorMode, toggleColorMode } = useColorMode()
+
+  if (activeType === type || activeType === null){
+  return (
+    <Center py={6}>
+      <Box
+        maxW={'445px'}
+        w={'full'}
+        bg={colorMode === 'light' ? 'white' : 'gray.900'}
+        boxShadow={'2xl'}
+        rounded={'md'}
+        p={6}
+        >
+        <CardBody title={title} description={description} imgSrc={imgSrc} type={type}/>
+        <DateSection date={date} length={length}/>
+        <LinkSection linkToCode={linkToCode} linkToLive={linkToLive}/>
+        </Box>
     </Center>
   );
 } else return '';
