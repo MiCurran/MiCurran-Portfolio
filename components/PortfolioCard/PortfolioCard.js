@@ -73,7 +73,7 @@ export default function PortfolioCard({ linkToCode, linkToLive, description, tit
         {date && 
         <Stack mt={6} direction={'row'} spacing={4} align={'center'}>
           <Stack direction={'column'} spacing={0} fontSize={'sm'}>
-            <Text fontWeight={'bold'} color={useColorModeValue('gray.700','gray.300')}>{date || ''} {length && `· ${length} read`}</Text>
+            <Text fontWeight={'bold'} color={'gray.400'}>{date || ''} {length && `· ${length} read`}</Text>
           </Stack>
         </Stack>
         }
