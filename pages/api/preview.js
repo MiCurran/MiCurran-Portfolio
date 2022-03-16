@@ -17,6 +17,5 @@ let getImageBase64 = async (url) => {
   let page = await browser.newPage();
   await page.goto(url);
   let image = await page.screenshot({ encoding: "base64" });
-  await browser.close();
   return image;
 };
