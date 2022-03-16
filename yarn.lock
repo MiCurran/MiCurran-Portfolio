@@ -3210,7 +3210,12 @@
   "resolved" "https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz"
   "version" "1.4.0"
 
-"next@^8.1.1-canary.54 || ^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0", "next@>=10.2.0", "next@11.0.1":
+"next-seo@^5.1.0":
+  "integrity" "sha512-ampuQfNTOi1x+xtRIb6CZGunIo6rQXtMo2Tyu861d5GjJFIwfOXsA4lzCa4+e2rLkyXDyVpavNNUZWa3US9ELw=="
+  "resolved" "https://registry.npmjs.org/next-seo/-/next-seo-5.1.0.tgz"
+  "version" "5.1.0"
+
+"next@^8.1.1-canary.54 || ^9.0.0 || ^10.0.0 || ^11.0.0 || ^12.0.0", "next@^8.1.1-canary.54 || >=9.0.0", "next@>=10.2.0", "next@11.0.1":
   "integrity" "sha512-yR7be7asNbvpVNpi6xxEg28wZ7Gqmj1nOt0sABH9qORmF3+pms2KZ7Cng33oK5nqPIzEEFJD0pp2PCe3/ueMIg=="
   "resolved" "https://registry.npmjs.org/next/-/next-11.0.1.tgz"
   "version" "11.0.1"
@@ -3741,24 +3746,6 @@
     "unbzip2-stream" "1.4.3"
     "ws" "8.5.0"
 
-"puppeteer@^13.5.1":
-  "integrity" "sha512-wWxO//vMiqxlvuzHMAJ0pRJeDHvDtM7DQpW1GKdStz2nZo2G42kOXBDgkmQ+zqjwMCFofKGesBeeKxIkX9BO+w=="
-  "resolved" "https://registry.npmjs.org/puppeteer/-/puppeteer-13.5.1.tgz"
-  "version" "13.5.1"
-  dependencies:
-    "cross-fetch" "3.1.5"
-    "debug" "4.3.3"
-    "devtools-protocol" "0.0.969999"
-    "extract-zip" "2.0.1"
-    "https-proxy-agent" "5.0.0"
-    "pkg-dir" "4.2.0"
-    "progress" "2.0.3"
-    "proxy-from-env" "1.1.0"
-    "rimraf" "3.0.2"
-    "tar-fs" "2.1.1"
-    "unbzip2-stream" "1.4.3"
-    "ws" "8.5.0"
-
 "querystring-es3@^0.2.0", "querystring-es3@0.2.1":
   "integrity" "sha1-nsYfeQSYdXB9aUFFlv2Qek1xHnM="
   "resolved" "https://registry.npmjs.org/querystring-es3/-/querystring-es3-0.2.1.tgz"
@@ -3818,7 +3805,7 @@
   dependencies:
     "@babel/runtime" "^7.12.13"
 
-"react-dom@^16.8.0 || 17.x", "react-dom@^17.0.2", "react-dom@>=16.8 || ^17.0.0", "react-dom@>=16.8.6", "react-dom@17.0.2":
+"react-dom@^16.8.0 || 17.x", "react-dom@^17.0.2", "react-dom@>=16.0.0", "react-dom@>=16.8 || ^17.0.0", "react-dom@>=16.8.6", "react-dom@17.0.2":
   "integrity" "sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-17.0.2.tgz"
   "version" "17.0.2"
@@ -3892,7 +3879,7 @@
     "invariant" "^2.2.4"
     "tslib" "^1.0.0"
 
-"react@*", "react@^15.3.0 || ^16.0.0 || ^17.0.0", "react@^16.8.0 || ^17.0.0", "react@^16.8.0 || 17.x", "react@^17.0.2", "react@>=16.8 || ^17.0.0", "react@>=16.8.0", "react@>=16.8.6", "react@15.x.x || 16.x.x || 17.x.x", "react@17.0.2":
+"react@*", "react@^15.3.0 || ^16.0.0 || ^17.0.0", "react@^16.8.0 || ^17.0.0", "react@^16.8.0 || 17.x", "react@^17.0.2", "react@>=16.0.0", "react@>=16.8 || ^17.0.0", "react@>=16.8.0", "react@>=16.8.6", "react@15.x.x || 16.x.x || 17.x.x", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"

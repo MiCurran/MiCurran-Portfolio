@@ -72,9 +72,9 @@ const DateSection = ({date, length}) => {
  )
 }
 
-const LinkSection = ({linkToCode, linkToLive}) => (
+const LinkSection = ({linkToCode}) => (
     <Link href={linkToCode} isExternal>
-    <Button colorScheme="gray" rightIcon={<ExternalLinkIcon />}  variant="solid">View Code</Button>
+      <Button colorScheme="gray" rightIcon={<ExternalLinkIcon />}  variant="solid">View Code</Button>
     </Link>
 )
 
@@ -98,13 +98,13 @@ export default function PortfolioCard({ linkToCode, linkToLive, description, tit
         }
         <HStack> 
             <Link href={linkToLive} isExternal>
-            <Button colorScheme="purple" rightIcon={<ExternalLinkIcon />}  variant="solid">{linkToCode ? 'View Live' : 'View Post'}</Button>
+              <Button colorScheme="purple" rightIcon={<ExternalLinkIcon />}  variant="solid">{linkToCode ? 'View Live' : 'View Post'}</Button>
             </Link>
             {linkToCode && 
               <LinkSection />
             }
         </HStack>
-        </Box>
+      </Box>
     </Center>
   );
 } else return '';

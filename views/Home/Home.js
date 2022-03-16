@@ -18,6 +18,7 @@ import {HiDocumentText } from 'react-icons/hi'
 import { motion } from "framer-motion"
 import { animationVariants } from '../../constants/animationVariants';
 import CustomSwitch from '../../components/CustomSwitch/CustomSwitch';
+import SEOHead from '../../components/Head';
 
 const MotionHeading = motion(Heading);
 const MotionAvatar = motion(Avatar);
@@ -58,11 +59,6 @@ export default function Home() {
   }, [router.events])
   return (
     <div >
-      <Head>
-        <title>Michael Curran</title>
-        <meta name="portfolio site" content="Michael Curran portfolio site" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
       <main>
         <Section>
         <HStack style={{position: 'absolute', top: '-10', left: '0'}}>
