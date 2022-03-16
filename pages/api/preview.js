@@ -1,4 +1,3 @@
-import chromium from 'chrome-aws-lambda';
 export default async function handler(req, res) {
   try {
     let { url } = req.query;
