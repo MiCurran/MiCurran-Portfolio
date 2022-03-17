@@ -1,6 +1,15 @@
 export const projects = [
     {
         type: 'React App',
+        title: 'NextJS + ChakraUI Boilerplate',
+        imgSrc: '/images/chakraBoilerplate.png',
+        date: '3/22',
+        linkToLive: 'http://nextjs-chakra-boilerplate-topaz.vercel.app/',
+        linkToCode: 'https://github.com/MiCurran/nextjs-chakra-boilerplate',
+        description: 'Template repository for creating a nextJS app with chakra ui and sass + simple animations & create component script'
+    },
+    {
+        type: 'React App',
         title: 'NextJS Boilerplate - Cardano Dapp Wallet Integration',
         imgSrc: '/images/namiWallet.png',
         date: '1/22',
