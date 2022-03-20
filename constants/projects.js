@@ -1,5 +1,13 @@
 export const projects = [
     {
+        type: 'Website Redesign',
+        title: 'Floyd Skiff co',
+        imgSrc: '/images/floydSkiff.png',
+        date: '8/21',
+        linkToLive: 'https://floydskiff.com',
+        description: 'Redesigned the website for Floyd Skiff co. and established an ongoing relationship to develop an E-Commerce shop.'
+    },
+    {
         type: 'React App',
         title: 'NextJS + ChakraUI Boilerplate',
         imgSrc: '/images/chakraBoilerplate.png',
